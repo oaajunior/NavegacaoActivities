@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">LoginTest</string>
+    <string name="login">Login</string>
+    <string name="senha">Senha</string>
+    <string name="usuario">Usuário</string>
+    <string name="bem_vindo">Bem-vindo:</string>
+    <string name="user_n_cadastrado">Não é cadastrado? Clique aqui!</string>
+    <string name="nomeUser">Nome:</string>
+    <string name="loginCasdastro">Login</string>
+    <string name="senhaUsuario">Senha:</string>
+    <string name="cadastrar">Cadastrar</string>
+</resources>
