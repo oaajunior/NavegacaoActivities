@@ -14,8 +14,10 @@ import android.support.v7.app.AppCompatActivity
 class MainActivity : AppCompatActivity() {
 
     private val NEXT_ACTIVITY_REQUEST_CODE = 1
+
     private var tLogin: EditText? = null
     private var tSenha: EditText? = null
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -33,14 +35,14 @@ class MainActivity : AppCompatActivity() {
             if(login.toLowerCase() == "oberdan" && senha =="123"){
 
 
-                val intent = Intent(this, BemVindo::class.java)
+//                val intent = Intent(this, BemVindo::class.java)
+//
+//                val params = Bundle()
+//                params.putString("usuario", login)
+//                intent.putExtras(params)
+//                startActivity(intent)
 
-                val params = Bundle()
-                params.putString("usuario", login)
-                intent.putExtras(params)
-                startActivity(intent)
-
-                //startTimer("Teste Alarme", 60)
+                startTimer("Teste Alarme", 60)
 
            }else{
 
@@ -57,6 +59,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun startTimer(message: String, seconds: Int) {
+
         val intent = Intent(AlarmClock.ACTION_SET_TIMER)
             .putExtra(AlarmClock.EXTRA_MESSAGE, message)
             .putExtra(AlarmClock.EXTRA_LENGTH, seconds)
@@ -72,7 +75,7 @@ class MainActivity : AppCompatActivity() {
 
         if (resultCode == Activity.RESULT_OK) {
 
-            if (requestCode == NEXT_ACTIVITY_REQUEST_CODE && intent != null) {
+            if (requestCode == 1 && intent != null) {
 
                 tLogin?.setText(intent.getStringExtra("loginCadastro"))
                 tSenha?.setText(intent.getStringExtra("senhaCadastro"))
